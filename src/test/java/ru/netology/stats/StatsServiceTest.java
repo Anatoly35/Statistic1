@@ -23,7 +23,7 @@ class StatsServiceTest {
     public void testAverage() {
         StatsService service = new StatsService();
         long[] average = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.AverageMonthlySales(average);
+        long actual = service.averageMonthlySales(average);
         long expected = 15;
 
         Assertions.assertEquals(expected, actual);
@@ -55,7 +55,7 @@ class StatsServiceTest {
     public void testBelowAverage() {
         StatsService service = new StatsService();
         long[] BelowAverage = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.DayBelowAverage(BelowAverage);
+        int actual = service.dayBelowAverage(BelowAverage);
         long expected = 5;
         Assertions.assertEquals(expected, actual);
         System.out.println(actual);
@@ -66,7 +66,7 @@ class StatsServiceTest {
     public void testAboveAverage() {
         StatsService service = new StatsService();
         long[] AboveAverage = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.DayAboveAverage(AboveAverage);
+        int actual = service.dayAboveAverage(AboveAverage);
         long expected = 5;
         Assertions.assertEquals(expected, actual);
         System.out.println(actual);
