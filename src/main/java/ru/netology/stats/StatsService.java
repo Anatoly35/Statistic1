@@ -44,22 +44,24 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
+
     public int dayBelowAverage(long[] sales) {
-        long averageSale = averageMonthlySales (sales);
+        long averageSale = averageMonthlySales(sales);
         int dayNumberBelow = 0;
         for (long sale : sales) {
-            if (sale < averageMonthlySales(sales)) {
+            if (sale < averageSale) {
                 dayNumberBelow++;
             }
         }
 
-            return dayNumberBelow;
-        }
+        return dayNumberBelow;
+    }
+
     public int dayAboveAverage(long[] sales) {
         long averageSale = averageMonthlySales(sales);
         int dayNumberAbove = 0;
         for (long sale : sales) {
-            if (sale > averageMonthlySales(sales)) {
+            if (sale > averageSale) {
                 dayNumberAbove++;
             }
         }
@@ -67,4 +69,4 @@ public class StatsService {
         return dayNumberAbove;
     }
 
-    }
+}
